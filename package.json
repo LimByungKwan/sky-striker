@@ -1,0 +1,1 @@
+{"name":"sky-striker","private":true,"type":"module","scripts":{"test":"node tests/verify.mjs"}}

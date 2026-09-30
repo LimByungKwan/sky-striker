@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090f19"><title>SKY STRIKER · 5스테이지 슈팅</title><meta name="description" content="자동 공격과 필살기로 5개 스테이지를 돌파하는 레트로 비행 슈팅 게임."><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="mast"><a class="brand" href="./"><span class="mark">✦</span> SKY<span>STRIKER</span></a><span class="edition">ARCADE / VOL. 01</span><button id="helpButton" class="quiet">조작 안내 <span>?</span></button></header>
+<main class="station">
+<aside class="left-panel">
+ <div class="eyebrow">MISSION CONTROL</div><h1>끝까지<br>돌파하라.</h1><p class="intro">다섯 개의 전선.<br>마지막 적은 네메시스.</p>
+ <div class="route-title">작전 경로 <span>05 SECTORS</span></div><ol class="route" id="route"></ol>
+ <div class="brief"><span class="label">YOUR MISSION</span><p>적을 격추하고 게이지를 모아<br>필살기로 탄막을 돌파하세요.</p><p class="muted">보스를 격파하면 HP 1 회복</p></div>
+ <a class="source-link" href="source.html" target="_blank" rel="noopener">소스 코드 보기 ↗</a>
+</aside>
+<section class="cabinet" aria-label="게임">
+ <div class="hud"><div><span>SCORE</span><strong id="score">000000</strong></div><div class="stage-hud"><span>SECTOR</span><strong id="stage">01 / 05</strong></div><div class="hp-hud"><span>SHIELD</span><strong id="hp" aria-label="체력 3">◆ ◆ ◆</strong></div></div>
+ <div class="viewport" id="viewport"><canvas id="game" width="480" height="680" tabindex="0" aria-label="비행 슈팅 게임. 방향키 또는 WASD 이동, Space 필살기, P 일시정지"></canvas>
+  <div class="boss-hud" id="bossHud" hidden><div><span id="bossName"></span><span id="bossPct"></span></div><progress id="bossHealth" max="100" value="100"></progress></div>
+  <div class="in-game-note" id="notice" aria-live="polite"></div>
+  <div class="overlay" id="overlay"><span class="overlay-kicker" id="overlayKicker">READY, PILOT?</span><h2 id="overlayTitle">SKY<br><span>STRIKER</span></h2><p id="overlayText">자동 공격 · 5스테이지 · 보스전</p><button class="primary" id="startButton">출격하기 <span>ENTER</span></button><span class="overlay-hint" id="overlayHint">방향키 / WASD 이동 · SPACE 필살기</span></div>
+ </div>
+ <div class="special-bar"><div><span>SPECIAL</span><span id="gaugeText">READY</span></div><progress id="gauge" max="100" value="100"></progress><button id="specialButton" aria-label="필살기 사용">필살기 <kbd>SPACE</kbd></button></div>
+ <div class="cabinet-bottom"><span id="timer">00:00</span><span id="modeLabel">CAMPAIGN</span><button id="pauseButton" class="quiet" disabled>일시정지 <kbd>P</kbd></button><button id="restartButton" class="quiet">재시작 <kbd>R</kbd></button></div>
+</section>
+<aside class="right-panel">
+ <div class="record-card"><span class="eyebrow">PERSONAL BEST</span><strong id="best">000000</strong><span class="muted">이 브라우저의 최고 점수</span></div>
+ <section class="controls"><h2>조작</h2><div><span>이동</span><span class="keys"><kbd>W</kbd><br><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></div><div><span>필살기</span><kbd>SPACE</kbd></div><div><span>공격</span><span class="muted">자동 발사</span></div><p class="touch-tip">터치 화면: 게임 영역을 드래그</p></section>
+ <section class="settings"><h2>효과 설정</h2><label><span>효과음</span><input type="checkbox" role="switch" id="sound"><span class="switch"></span></label><label><span>화면 효과</span><input type="checkbox" role="switch" id="effects"><span class="switch"></span></label></section>
+ <section class="trial-card"><span class="eyebrow">FLIGHT LAB</span><h2>30초 시험 비행</h2><p>적 탄환 속도만 바꿔<br>A · B 난이도를 비교하세요.</p><div class="trial-count"><span id="trialCount">0 / 20회</span><span id="trialNext">다음 A · ×1.00</span></div><button class="secondary" id="trialButton">시험 비행 시작</button><button class="text-button" id="recordsButton">기록 / 비교 결과</button></section>
+</aside>
+</main>
+<footer><span>01—04 MID BOSS / 05 FINAL BOSS</span><span id="saveStatus" role="status">기록은 이 브라우저에 저장됩니다.</span></footer>
+<dialog id="helpDialog"><div class="dialog-head"><h2>비행 매뉴얼</h2><button data-close aria-label="닫기">✕</button></div><p>방향키 또는 WASD로 이동합니다. 기본 공격은 자동으로 발사됩니다.</p><p><b>Space / 필살기 버튼</b> — 게이지가 100%일 때 적 탄환을 지우고 강력한 피해를 줍니다. 처음부터 1회 사용할 수 있습니다.</p><p><b>주황색 엘리트 적</b>은 조준 탄막을 발사합니다. 보스의 붉은 점선은 레이저 경고입니다. 1.25초 뒤 발사되니 옆으로 피하세요.</p><p>각 스테이지에서 20초간 전투한 뒤 보스를 격파하세요. 5스테이지 최종보스의 체력이 절반이면 공격이 빨라집니다.</p><p><b>P</b> 일시정지 · <b>R</b> 재시작 · 탭을 벗어나면 자동 일시정지</p><p class="muted">시험 비행은 30초 동안 생존하거나 체력이 소진되면 종료됩니다. A/B가 번갈아 배정되며, 한 쌍은 같은 적 등장 순서를 사용합니다. 변경 값은 적 탄환 속도 ×1.00 / ×1.25 하나입니다.</p></dialog>
+<dialog id="recordsDialog"><div class="dialog-head"><h2>비행 기록</h2><button data-close aria-label="닫기">✕</button></div><div id="comparison"></div><div class="table-wrap"><table><thead><tr><th>회차</th><th>모드</th><th>속도</th><th>점수</th><th>시간</th><th>결과</th></tr></thead><tbody id="recordsBody"></tbody></table></div><p class="muted">직접 끝낸 플레이만 기록됩니다. 자동 검증 결과는 소스의 TEST-REPORT.md에서 확인하세요.</p><div class="dialog-actions"><button class="secondary" id="exportButton">CSV 내려받기</button><button class="danger" id="resetButton">모든 기록 초기화</button></div><div id="resetConfirm" hidden><p>최고점수와 플레이 기록을 지울까요?</p><button class="danger" id="confirmReset">초기화하기</button><button class="quiet" id="cancelReset">취소</button></div></dialog>
+<script type="module" src="app.js"></script></body></html>

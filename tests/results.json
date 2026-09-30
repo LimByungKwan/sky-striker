@@ -1,0 +1,320 @@
+{
+  "checks": [
+    "PC boundaries: all four edges / diagonal normalization",
+    "Damage, invulnerability and loss",
+    "Special: damage, bullets cleared, charge consumed",
+    "Five bosses, final phase 2, final clear",
+    "Laser warning before active damage",
+    "Fresh, corrupt, blocked storage, reset and valid records",
+    "Deterministic A/B: only enemy bullet velocity differs",
+    "600 seconds / 36,000 simulation frames: finite state, bounded objects, repeated restarts",
+    "Full five-stage clear from fresh state using legal movement and special inputs: seeds 65 and 76"
+  ],
+  "trials": [
+    {
+      "mode": "trial",
+      "speed": 1,
+      "seed": 800,
+      "score": 3300,
+      "time": 27.05,
+      "stage": 1,
+      "status": "lost",
+      "kills": 28,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1.25,
+      "seed": 800,
+      "score": 2300,
+      "time": 20.05,
+      "stage": 1,
+      "status": "lost",
+      "kills": 18,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1,
+      "seed": 801,
+      "score": 5000,
+      "time": 30.02,
+      "stage": 1,
+      "status": "trial-complete",
+      "kills": 35,
+      "specials": 2
+    },
+    {
+      "mode": "trial",
+      "speed": 1.25,
+      "seed": 801,
+      "score": 2000,
+      "time": 17.37,
+      "stage": 1,
+      "status": "lost",
+      "kills": 15,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1,
+      "seed": 802,
+      "score": 6050,
+      "time": 30.02,
+      "stage": 1,
+      "status": "trial-complete",
+      "kills": 33,
+      "specials": 2
+    },
+    {
+      "mode": "trial",
+      "speed": 1.25,
+      "seed": 802,
+      "score": 5700,
+      "time": 30.02,
+      "stage": 1,
+      "status": "trial-complete",
+      "kills": 32,
+      "specials": 2
+    },
+    {
+      "mode": "trial",
+      "speed": 1,
+      "seed": 803,
+      "score": 4600,
+      "time": 30.02,
+      "stage": 1,
+      "status": "trial-complete",
+      "kills": 31,
+      "specials": 3
+    },
+    {
+      "mode": "trial",
+      "speed": 1.25,
+      "seed": 803,
+      "score": 1800,
+      "time": 19.25,
+      "stage": 1,
+      "status": "lost",
+      "kills": 13,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1,
+      "seed": 804,
+      "score": 2900,
+      "time": 26.32,
+      "stage": 1,
+      "status": "lost",
+      "kills": 24,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1.25,
+      "seed": 804,
+      "score": 2800,
+      "time": 26.05,
+      "stage": 1,
+      "status": "lost",
+      "kills": 23,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1,
+      "seed": 805,
+      "score": 1400,
+      "time": 18.05,
+      "stage": 1,
+      "status": "lost",
+      "kills": 9,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1.25,
+      "seed": 805,
+      "score": 3900,
+      "time": 27.52,
+      "stage": 1,
+      "status": "lost",
+      "kills": 24,
+      "specials": 2
+    },
+    {
+      "mode": "trial",
+      "speed": 1,
+      "seed": 806,
+      "score": 4550,
+      "time": 30.02,
+      "stage": 1,
+      "status": "trial-complete",
+      "kills": 28,
+      "specials": 2
+    },
+    {
+      "mode": "trial",
+      "speed": 1.25,
+      "seed": 806,
+      "score": 2550,
+      "time": 21.67,
+      "stage": 1,
+      "status": "lost",
+      "kills": 18,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1,
+      "seed": 807,
+      "score": 5100,
+      "time": 30.02,
+      "stage": 1,
+      "status": "trial-complete",
+      "kills": 31,
+      "specials": 3
+    },
+    {
+      "mode": "trial",
+      "speed": 1.25,
+      "seed": 807,
+      "score": 800,
+      "time": 15.95,
+      "stage": 1,
+      "status": "lost",
+      "kills": 8,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1,
+      "seed": 808,
+      "score": 3100,
+      "time": 24.15,
+      "stage": 1,
+      "status": "lost",
+      "kills": 21,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1.25,
+      "seed": 808,
+      "score": 3150,
+      "time": 22.17,
+      "stage": 1,
+      "status": "lost",
+      "kills": 19,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1,
+      "seed": 809,
+      "score": 2300,
+      "time": 19.47,
+      "stage": 1,
+      "status": "lost",
+      "kills": 18,
+      "specials": 1
+    },
+    {
+      "mode": "trial",
+      "speed": 1.25,
+      "seed": 809,
+      "score": 4450,
+      "time": 29.9,
+      "stage": 1,
+      "status": "lost",
+      "kills": 32,
+      "specials": 1
+    }
+  ],
+  "summaries": [
+    {
+      "speed": 1,
+      "runs": 10,
+      "averageScore": 3830,
+      "averageTime": 26.51,
+      "survivals": 5
+    },
+    {
+      "speed": 1.25,
+      "runs": 10,
+      "averageScore": 2945,
+      "averageTime": 23,
+      "survivals": 1
+    }
+  ],
+  "campaigns": [
+    {
+      "mode": "campaign",
+      "speed": 1,
+      "seed": 101,
+      "score": 12350,
+      "time": 84.55,
+      "stage": 3,
+      "status": "lost",
+      "kills": 61,
+      "specials": 6
+    },
+    {
+      "mode": "campaign",
+      "speed": 1,
+      "seed": 102,
+      "score": 18600,
+      "time": 104.08,
+      "stage": 4,
+      "status": "lost",
+      "kills": 91,
+      "specials": 8
+    },
+    {
+      "mode": "campaign",
+      "speed": 1,
+      "seed": 103,
+      "score": 8950,
+      "time": 67.62,
+      "stage": 3,
+      "status": "lost",
+      "kills": 47,
+      "specials": 3
+    },
+    {
+      "mode": "campaign",
+      "speed": 1,
+      "seed": 65,
+      "score": 30300,
+      "time": 159.28,
+      "stage": 5,
+      "status": "won",
+      "kills": 133,
+      "specials": 18
+    },
+    {
+      "mode": "campaign",
+      "speed": 1,
+      "seed": 76,
+      "score": 31400,
+      "time": 159.28,
+      "stage": 5,
+      "status": "won",
+      "kills": 134,
+      "specials": 18
+    }
+  ],
+  "endurance": {
+    "simulationSeconds": 600,
+    "frames": 36000,
+    "restarts": 5,
+    "maxObjects": 123,
+    "wallMilliseconds": 103
+  },
+  "limitations": [
+    "No graphical browser QA in this environment.",
+    "600 seconds simulated, not a 10-minute real-time PC/browser run.",
+    "A/B rows are automated controller results, not user play records."
+  ]
+}
